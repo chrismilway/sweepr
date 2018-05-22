@@ -1,3 +1,15 @@
+import localforage from 'localforage';
+
+const KEY = 'playerData';
+
+const getUserData = () => {
+    return localforage.getItem(KEY);
+}
+
+const updateUserData = (data) => {
+    localforage.setItem(KEY, data);
+}
+
 const adjacentCells = (x, y, x2, y2) => {
     const coords = [
         [x - 1, y - 1], [x, y - 1], [x + 1, y - 1],
@@ -14,4 +26,4 @@ const adjacentCells = (x, y, x2, y2) => {
     }, []);
 }
 
-export { adjacentCells };
+export { getUserData, updateUserData, adjacentCells };

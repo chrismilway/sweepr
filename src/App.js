@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getUserData, updateUserData } from './User';
+import { getUserData, updateUserData } from './utils';
 import Board from './Board';
 import './App.css';
 
