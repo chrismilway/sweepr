@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: blue;
+  box-sizing: border-box;
+}
+body * {
+  box-sizing: inherit;
+  font-family: 'Roboto Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  position: absolute;
+}
+
+.settings {
+  height: 2rem;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  display: flex;
+  align-items: stretch;
+}
+
+.settings input {
+  width: 4rem;
+  border: 2px solid yellow;
+  background-color: yellow;
+  color: blue;
+  margin: 1px;
+  line-height: 1;
+}
+.settings button {
+  background-color: blue;
+  color: yellow;
+  border: 2px solid yellow;
+  line-height: 1;
+  margin: 1px;
+  text-transform: uppercase;
+}
+.settings button:focus { outline: none; }
+.settings button:active {
+  color: blue;
+  background-color: yellow;
+}
+
+.stats {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  height: 2rem;
+  display: flex;
+  align-items: stretch;
+}
+.stats div {
+  margin: 1px;
+  background-color: yellow;
+  color: blue;
+  padding: .25rem;
+}
+
+.board {
+  display: grid;
+  grid-gap: 1px;
+  background-color: blue;
+  padding: 2px;
+  border: 1px solid yellow;
+  position: relative;
+}
+
+.cell {
+  bordeR: 0;
+  background-color: yellow;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell:focus {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.cell-visible {
+  background-color: transparent;
+  color: yellow;
+}
+
+.cell-marker-1::before {
+  font-family: 'Material Icons';
+  content: 'flag';
+  font-size: 1.5rem;
+}
+.cell-marker-2::before {
+  font-family: 'Material Icons';
+  content: 'outlined_flag';
+  font-size: 1.5rem;
+}
+
+.cell-mine::before {
+  font-family: 'Material Icons';
+  content: 'gps_not_fixed';
+  font-size: 1.5rem;
+  transform: rotate(45deg);
+  display: block;
+  transform-origin: 50% 50%;
+}
+
+.counter {
+  position: absolute;
+  top: 100%;
+  right: -1px;
+  width: 3rem;
+  background-color: yellow;
+  color: blue;
+  padding: .25rem;
+}
+
+.msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: yellow;
+  border: 2px solid blue;
+  padding: 2rem 4rem;
+  color: blue;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
